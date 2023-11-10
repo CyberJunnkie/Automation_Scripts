@@ -24,15 +24,13 @@ sudo tar -xzvf /tmp/openfire.tar.gz -C $INSTALL_DIR --strip-components=1
 # Create a symbolic link for easy access
 sudo ln -s $INSTALL_DIR /opt/openfire
 
-# Create a user for Openfire
-sudo useradd -r openfire
 
 # Set ownership and permissions
-sudo chown -R openfire:openfire $INSTALL_DIR
+#sudo chown -R openfire:openfire $INSTALL_DIR
 
 # Start Openfire
 echo "Starting Openfire..."
-sudo -u openfire $INSTALL_DIR/bin/openfire start
+sudo  $INSTALL_DIR/bin/openfire start
 
 # Clean up
 rm /tmp/openfire.tar.gz
